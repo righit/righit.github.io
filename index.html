@@ -1,0 +1,37 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"><title>ONE</title><link rel=manifest href=/static/manifest.json><link href=/static/css/app.dedd96fc0052b4c638a1c9a07111f75c.css rel=stylesheet></head><body><div id=app></div><script>function FETCH_POST(url,data) {
+      return fetch(url, {
+        body:data,
+        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+        credentials: 'same-origin', // include, same-origin, *omit
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded', 
+            'Accept': 'application/json, text/plain, */*'
+        },
+        method: 'POST', // *GET, POST, PUT, DELETE, etc.
+        mode: 'cors', // no-cors, cors, *same-origin
+        redirect: 'follow', // manual, *follow, error
+        referrer: 'no-referrer', // *client, no-referrer
+      })
+      // .then(response => response.json()) // parses response to JSON
+      .then(response => response.json()) // parses response to JSON
+    }
+    function XHR_POST(url,data){
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.open('POST',url,true);
+      xmlhttp.send(data)
+      xmlhttp.onreadystatechange=function()
+      {
+          if (xmlhttp.readyState==4 && xmlhttp.status==200)
+          {
+            console.log('AJAX OK!')
+            console.log(JSON.parse(xmlhttp.responseText));
+          }
+      }
+    }
+    if(window.fetch){
+      // FETCH_POST(url)
+      console.log('支持Fetch的浏览器')
+    }else{
+      console.log('使用xhr的浏览器')
+      //XHR_POST(url)
+    }</script><script src=https://res.wx.qq.com/open/js/jweixin-1.4.0.js></script><script type=text/javascript src=/static/js/manifest.36aad5940d82d4ece240.js></script><script type=text/javascript src=/static/js/vendor.cf2dd9a08478df007085.js></script><script type=text/javascript src=/static/js/app.2e28af508f67de3cd470.js></script></body></html>
