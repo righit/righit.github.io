@@ -1,7 +1,7 @@
 {
     "start_url": "/?utm_source=homescreen",
-    "name": "福分通内购",
-    "short_name": "福分通内购",
+    "name": "PORNHUB",
+    "short_name": "PORNHUB",
     "icons": [
         {
             "src": "imgs/icon/logo.png",
@@ -35,6 +35,6 @@
         }
     ],
     "display": "standalone",
-    "background_color": "#ff0077",
-    "theme_color": "#ff0077"
+    "background_color": "#000000",
+    "theme_color": "#000000"
 }
